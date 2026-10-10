@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Plant Shop</title>
+  <meta name="description" content="Welcome To The Greenstore - Let's Bring the Spring to Your Home. Shop the finest indoor plants, air purifying greenery, and garden accessories.">
+
+  <!-- Google Fonts: DM Sans & Unna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Unna:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header & Navigation Bar
+       ======================================================================== -->
+  <header class="site-header" id="masthead">
+    <div class="container header-inner">
+      <!-- Site Logo -->
+      <a href="index.html" class="site-logo" aria-label="Plant Shop Home">
+        <img src="assets/images/Bloom Theory Botanical Logo.png" alt="Plant Shop" width="520" height="110">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-navigation" aria-label="Primary Navigation">
+        <ul class="nav-menu-desktop">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="#products" class="nav-link">Plants</a></li>
+          <li><a href="add-product.html" class="nav-link">Add Product</a></li>
+          <li><a href="#story" class="nav-link">About</a></li>
+          <li><a href="#footer" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Cart & Mobile Toggle) -->
+      <div class="header-actions">
+        <button type="button" class="cart-trigger-btn" id="cartTriggerBtn" aria-label="Open Shopping Cart">
+          <span class="cart-subtotal" id="cartSubtotal">$0.00</span>
+          <div class="cart-icon-wrap">
+            <svg id="ast-bag-icon-svg" viewBox="826 826 140 140">
+              <path d="M960.758,934.509l2.632,23.541c0.15,1.403-0.25,2.657-1.203,3.761c-0.953,1.053-2.156,1.579-3.61,1.579H833.424 c-1.454,0-2.657-0.526-3.61-1.579c-0.952-1.104-1.354-2.357-1.203-3.761l2.632-23.541H960.758z M953.763,871.405l6.468,58.29H831.77 l6.468-58.29c0.15-1.203,0.677-2.218,1.58-3.045c0.903-0.827,1.981-1.241,3.234-1.241h19.254v9.627c0,2.658,0.94,4.927,2.82,6.807 s4.149,2.82,6.807,2.82c2.658,0,4.926-0.94,6.807-2.82s2.821-4.149,2.821-6.807v-9.627h28.882v9.627 c0,2.658,0.939,4.927,2.819,6.807c1.881,1.88,4.149,2.82,6.807,2.82s4.927-0.94,6.808-2.82c1.879-1.88,2.82-4.149,2.82-6.807v-9.627 h19.253c1.255,0,2.332,0.414,3.235,1.241C953.086,869.187,953.612,870.202,953.763,871.405z M924.881,857.492v19.254 c0,1.304-0.476,2.432-1.429,3.385s-2.08,1.429-3.385,1.429c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.43-2.081-1.43-3.385 v-19.254c0-5.315-1.881-9.853-5.641-13.613c-3.76-3.761-8.298-5.641-13.613-5.641s-9.853,1.88-13.613,5.641 c-3.761,3.76-5.641,8.298-5.641,13.613v19.254c0,1.304-0.476,2.432-1.429,3.385c-0.953,0.953-2.081,1.429-3.385,1.429 c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.429-2.081-1.429-3.385v-19.254c0-7.973,2.821-14.779,8.461-20.42 c5.641-5.641,12.448-8.461,20.42-8.461c7.973,0,14.779,2.82,20.42,8.461C922.062,842.712,924.881,849.519,924.881,857.492z" />
+            </svg>
+            <span class="cart-count-badge" id="cartCountBadge">0</span>
+          </div>
+        </button>
+
+        <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h6 class="hero-eyebrow">Welcome To The Greenstore</h6>
+      <h1 class="hero-title">Let’s Bring the Spring to Your Home</h1>
+      <a href="#products" class="btn btn-white">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Featured Products Section ("New Plants")
+       ======================================================================== -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="products-header">
+        <h2>New Plants</h2>
+        <div class="products-header-actions">
+          <a href="add-product.html" class="btn btn-outline" id="addNewPlantBtn">
+            <i class="fa-solid fa-plus" style="margin-right: 8px;"></i> Add Product
+          </a>
+          <a href="#products" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+
+      <!-- Dynamically loaded products with skeleton fetch simulation -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected dynamically by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Our Story Section
+       ======================================================================== -->
+  <section class="story-section" id="story">
+    <div class="container story-grid">
+      <div class="story-image-wrap">
+        <img src="assets/images/person-nurturing-indoor-plants-with-vintage-watering-can-by-a-sunny-window-free-photo.webp" alt="Person caring for indoor plants" class="story-image" width="600" height="400" loading="lazy">
+      </div>
+      <div class="story-content">
+        <h6 class="story-eyebrow">Our Story</h6>
+        <h2 class="story-title">For People Who Love Plants</h2>
+        <p class="story-desc">
+          Vivamus quam sociis tristique diam at donec nisl, hendrerit leo nunc at velit lacinia porttitor a nulla tellus ultrices varius aliquet sed in placerat.
+        </p>
+        <p class="story-desc">
+          Facilisis eu faucibus diam cursus pulvinar consectetur purus sem felis, mauris consectetur nisl vitae gravida ultricies sem condimentum aliquet ut sed gravida amet vitae euismod pulvinar volutpat laoreet pharetra.
+        </p>
+        <a href="#story" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       What Our Customers Say (Testimonials)
+       ======================================================================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-icon">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            “Sed odio donec curabitur auctor amet tincidunt non odio enim felis tincidunt amet morbi egestas hendrerit.”
+          </p>
+          <div class="testimonial-author">
+            <img src="https://i.pinimg.com/736x/59/f1/55/59f155988e1ff5cbf2c489114e74171b.jpg" alt="Jennifer Lewis" class="testimonial-avatar" width="48" height="48" loading="lazy">
+            <h4 class="testimonial-name">I am Groot</h4>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-icon">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            “Sed odio donec curabitur auctor amet tincidunt non odio enim felis tincidunt amet morbi egestas hendrerit.”
+          </p>
+          <div class="testimonial-author">
+            <img src="https://i.pinimg.com/736x/72/b8/d0/72b8d00063b9d3133b6888352b96b40a.jpg" alt="Alicia Heart" class="testimonial-avatar" width="48" height="48" loading="lazy">
+            <h4 class="testimonial-name">Chispin</h4>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-icon">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            “Sed odio donec curabitur auctor amet tincidunt non odio enim felis tincidunt amet morbi egestas hendrerit.”
+          </p>
+          <div class="testimonial-author">
+            <img src="https://i.pinimg.com/736x/c6/de/f8/c6def8d9dc7eaa9217789c0ae997de8d.jpg" alt="Juan Carlos" class="testimonial-avatar" width="48" height="48" loading="lazy">
+            <h4 class="testimonial-name">Treeko</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Gift Card Section
+       ======================================================================== -->
+  <section class="gift-card-section" id="gift-card">
+    <div class="gift-card-overlay"></div>
+    <div class="gift-card-content">
+      <h6 class="gift-card-eyebrow">Gift Card</h6>
+      <h2 class="gift-card-title">Give the Gift of Greenery</h2>
+      <p class="gift-card-desc">
+        Pretium tortor risus enim neque quis pellentesque maecenas proin odio eget arcu
+      </p>
+      <a href="#gift-card" class="btn btn-white">Purchase A Gift Card</a>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Features / Value Propositions
+       ======================================================================== -->
+
+  <section class="features-section" id="features">
+    <div class="container features-grid">
+      <div class="feature-box">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="feature-info">
+          <h5>Secure Payment</h5>
+          <p>Curabitur interdum, nisl at tincidunt.</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-box"></i>
+        </div>
+        <div class="feature-info">
+          <h5>Delivered With Care</h5>
+          <p>Donec sit amet neque id nisl.</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <div class="feature-info">
+          <h5>Excellent Service</h5>
+          <p>Amet neque id nisl ullamcorper.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-nav-col">
+          <a href="index.html" class="footer-logo" aria-label="Plant Shop Home">
+            <img src="assets/images/site-logo-white.svg" alt="Plant Shop" width="108" height="24">
+          </a>
+          <ul class="footer-nav-menu">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="#products" class="footer-nav-link">Plants</a></li>
+            <li><a href="add-product.html" class="footer-nav-link">Add Product</a></li>
+            <li><a href="#story" class="footer-nav-link">About</a></li>
+            <li><a href="#footer" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-col">
+          <h3 class="newsletter-title">Subscribe to our newsletter</h3>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Your email address *" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+          <div class="newsletter-feedback" id="newsletterFeedback"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Plant Shop. Powered by Plant Shop.</p>
+        <ul class="footer-social-links">
+          <li><a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Cart Slide-out Drawer
+       ======================================================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Shopping Cart</h3>
+      <button class="cart-drawer-close" id="cartCloseBtn" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <!-- Empty Cart Message -->
+      <div class="cart-empty-state" id="cartEmptyState">
+        <div class="cart-empty-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <h4 class="cart-empty-title">Your Cart Is Empty</h4>
+        <p>Check out our shop to see what's available</p>
+      </div>
+
+      <!-- Cart Items List -->
+      <ul class="cart-items-list" id="cartItemsList" style="display: none;"></ul>
+    </div>
+
+    <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
+      <div class="cart-total-row">
+        <span>Subtotal:</span>
+        <span class="cart-total-amount" id="cartTotalAmount">$0.00</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" id="checkoutBtn">Checkout</button>
+      <button class="btn cart-continue-btn" id="continueShoppingBtn">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Mobile Navigation Drawer
+       ======================================================================== -->
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+        <li><a href="#products" class="mobile-nav-link">Plants</a></li>
+        <li><a href="add-product.html" class="mobile-nav-link">Add Product</a></li>
+        <li><a href="#story" class="mobile-nav-link">About</a></li>
+        <li><a href="#footer" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">
+      &copy; 2026 Plant Shop
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Toast Notification
+       ======================================================================== -->
+  <div class="toast-notification" id="toastNotification" role="alert">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span id="toastMessage">Added to cart</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
